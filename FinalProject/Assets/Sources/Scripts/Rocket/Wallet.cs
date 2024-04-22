@@ -4,9 +4,8 @@ using UnityEngine;
 public class Wallet : MonoBehaviour
 {
     public Action<int> OnCoinsChange;
-    [field: SerializeField] public int CoinsQuantity { get; private set; }
+    [field: SerializeField] public int CoinsQuantity { get; set; }
     [SerializeField] private Rocket _rocket;
-    [SerializeField] private Shop _shop;
     
     private void Awake()
     {

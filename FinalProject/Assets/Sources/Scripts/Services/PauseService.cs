@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 public class PauseService : MonoBehaviour
 {
@@ -20,7 +19,6 @@ public class PauseService : MonoBehaviour
     
     public void Pause()
     {
-        //Time.timeScale = 0;
         IsPause = true;
         foreach (IPause pause in _pauses)
         {
@@ -30,7 +28,6 @@ public class PauseService : MonoBehaviour
 
     public void Resum()
     {
-        //Time.timeScale = 1;
         foreach (IPause pause in _pauses)
         {
             pause.Resum();

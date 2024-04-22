@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -33,18 +32,21 @@ public class ShopViewer : MonoBehaviour
         _shop.OnFuelBuy += UpdateViewFuel;
     }
 
-    private void UpdateViewFuel(float amount)
+    private void UpdateViewFuel()
     {
-        
+        _maxFuel.text = $"Max fuel : {_rocket.MaxFuel.ToString()}";
+        _coinsQuantity.text = $"Your coins : {_wallet.CoinsQuantity.ToString()}";
     }
     
-    private void UpdateViewSpeed(float amount)
+    private void UpdateViewSpeed()
     {
-        
+        _maxSpeed.text = $"Current speed : {_rocket.Speed.ToString()}";
+        _coinsQuantity.text = $"Your coins : {_wallet.CoinsQuantity.ToString()}";
     }
     
-    private void UpdateViewLife(float amount)
+    private void UpdateViewLife()
     {
-        
+        _maxLife.text = $"LIfes : {_rocket.MaxHealth.ToString()}";
+        _coinsQuantity.text = $"Your coins : {_wallet.CoinsQuantity.ToString()}";
     }
 }

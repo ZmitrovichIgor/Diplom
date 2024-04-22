@@ -13,7 +13,7 @@ public class Rocket : MonoBehaviour, IPause
     [field: SerializeField] public int MaxFuel { get; set; }
     [field: SerializeField] public int CurrentHealth { get; set; }
     [field: SerializeField] public int MaxHealth { get; set; }
-    [field: SerializeField] public int Speed { get; set; } = 2;
+    [field: SerializeField] public float Speed { get; set; } = 2;
     [field: SerializeField] public bool IsFly { get; set; }
     [field: SerializeField] public float HightReached { get; set; }
 
@@ -86,6 +86,7 @@ public class Rocket : MonoBehaviour, IPause
     public void Pause()
     {
         IsFly = false;
+        OnFuelChange?.Invoke(MaxFuel);
     }
 
     public void Resum()

@@ -7,7 +7,6 @@ public class Fuel : MonoBehaviour
     [field: SerializeField] public int Amount { get; private set; }
 
     private int _lifetime = 10;    
-
     
     private void Awake()
     {
